@@ -1,0 +1,35 @@
+{
+	"name": "angular-utc-datepicker",
+	"version": "1.0.0",
+	"description": "A simple Angular 4 datepicker component that exclusively uses UTC",
+	"main": "bundles/utc-datepicker.umd.min.js",
+	"module": "index.js",
+	"typings": "index.d.ts",
+	"keywords": [
+		"angular",
+		"angular4",
+		"angular 4",
+		"datepicker",
+		"utc"
+	],
+	"author": {
+		"name": "ericsvendsen",
+		"email": "esvendsen@gmail.com"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ericsvendsen/angular-utc-datepicker.git"
+	},
+	"homepage": "https://github.com/ericsvendsen/angular-utc-datepicker",
+	"bugs": {
+		"url": "https://github.com/ericsvendsen/angular-utc-datepicker/issues"
+	},
+	"peerDependencies": {
+		"@angular/core": "^4.0.0",
+		"rxjs": "^5.4.3",
+		"zone.js": "^0.8.4",
+		"font-awesome": "^4.7.0",
+		"moment": "^2.18.1"
+	}
+}
