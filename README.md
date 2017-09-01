@@ -10,8 +10,7 @@ A simple Angular 4 datepicker component that exclusively uses UTC.
 * Font Awesome
 
 ## How to use
-* Import into app module
-** `import { UtcDatepickerModule } from 'angular-utc-datepicker';`
+* Import into app module: `import { UtcDatepickerModule } from 'angular-utc-datepicker';`
 * `format` option, for formatting date (and time, if necessary); defaults to `'YYYY-MM-DD'`. Uses [Moment](http://momentjs.com/docs/#/displaying/format/) formatting.
 * `button` option, for showing/hiding a button which opens the calendar popup
 * `buttonPosition` option, possible values are `before` and `after` (defaults to `after`)
