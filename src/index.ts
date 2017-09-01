@@ -1,2 +1,2 @@
-export { DatepickerModule } from './datepicker.module';
-export { DatepickerComponent } from './datepicker.component';
+export { UtcDatepickerModule } from './utc-datepicker.module';
+export { UtcDatepickerComponent } from './utc-datepicker.component';

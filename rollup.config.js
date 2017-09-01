@@ -1,9 +1,25 @@
 export default {
-	entry: 'dist/index.js',
-	dest: 'dist/bundles/utc-datepicker.umd.js',
+	input: 'dist/index.js',
+    output: {
+	    file: 'dist/bundles/utc-datepicker.umd.js',
+        format: 'umd'
+    },
 	sourceMap: false,
-	format: 'umd',
-	moduleName: 'ng.utc-datepicker',
+    external: ['@angular/core', '@angular/common', '@angular/forms', 'moment'],
+	name: 'ng.utc-datepicker',
+    plugins: [
+        // rollup needs import moment from 'moment'
+        // https://github.com/rollup/rollup-plugin-typescript/issues/68
+        // https://github.com/moment/moment/issues/3748
+        {
+            name: 'replace moment imports',
+            transform: code =>
+                ({
+                    code: code.replace(/import\s*\*\s*as\s*moment/g, 'import moment'),
+                    map: { mappings: '' }
+                })
+        }
+    ],
 	globals: {
 		'@angular/core': 'ng.core',
 		'@angular/common': 'ng.common',

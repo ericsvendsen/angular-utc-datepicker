@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { DatepickerComponent } from './datepicker.component';
+import { UtcDatepickerComponent } from './utc-datepicker.component';
 
 @NgModule({
 	imports: [
@@ -10,7 +10,7 @@ import { DatepickerComponent } from './datepicker.component';
         FormsModule
 	],
 	providers: [],
-	declarations: [DatepickerComponent],
-	exports: [DatepickerComponent]
+	declarations: [UtcDatepickerComponent],
+	exports: [UtcDatepickerComponent]
 })
-export class DatepickerModule { }
+export class UtcDatepickerModule { }

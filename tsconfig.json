@@ -8,7 +8,6 @@
 		"noImplicitAny": true,
 		"module": "es2015",
 		"moduleResolution": "node",
-		"allowSyntheticDefaultImports": true,
 		"paths": {
 			"@angular/core": [
 				"node_modules/@angular/core"
