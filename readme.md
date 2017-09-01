@@ -6,8 +6,8 @@ A simple Angular 4 datepicker component that exclusively uses UTC.
 
 ## Dependencies
 * Angular 4
-* MomentJS
-* Font Awesome
+* [MomentJS](http://momentjs.com)
+* [Font Awesome](http://fontawesome.io)
 
 ## How to use
 * Import into app module: `import { UtcDatepickerModule } from 'angular-utc-datepicker';`
