@@ -1,11 +1,11 @@
 # Angular UTC Datepicker
-A simple Angular 5 datepicker component that exclusively uses UTC.
+A simple Angular datepicker component that exclusively uses UTC.
 
 ## Install
 `npm install --save angular-utc-datepicker`
 
 ## Dependencies
-* Angular 5
+* Angular >= 2
 * [MomentJS](http://momentjs.com)
 * [Font Awesome](http://fontawesome.io)
 
