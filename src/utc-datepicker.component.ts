@@ -225,13 +225,15 @@ export class UtcDatepickerComponent implements OnInit {
 
     closeCalendar = () => {
         setTimeout(() => {
-            this.showCalendar = document.activeElement.className.includes('angular-utc-datepicker_calendar-popup') ||
-                document.activeElement.className.includes('angular-utc-datepicker_input');
-            if (!this.showCalendar) {
-                this.calendarTitle = this.getMomentDate(this.date).format('MMMM YYYY');
-                this.tempDate = this.getMomentDate(this.date);
-                if (this.inputText && this.inputText !== this.date) {
-                    this.el.nativeElement.value = this.date;
+            if (document.activeElement) {
+                this.showCalendar = document.activeElement.className.includes('angular-utc-datepicker_calendar-popup') ||
+                    document.activeElement.className.includes('angular-utc-datepicker_input');
+                if (!this.showCalendar) {
+                    this.calendarTitle = this.getMomentDate(this.date).format('MMMM YYYY');
+                    this.tempDate = this.getMomentDate(this.date);
+                    if (this.inputText && this.inputText !== this.date) {
+                        this.el.nativeElement.value = this.date;
+                    }
                 }
             }
         }, 50);
