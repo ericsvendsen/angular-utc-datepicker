@@ -1,6 +1,6 @@
 {
   "name": "angular-utc-datepicker",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "A simple Angular datepicker component that exclusively uses UTC",
   "keywords": [
     "angular",
