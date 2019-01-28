@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild } from '@angular/core';
+import 'shim-keyboard-event-key';
 import * as moment from 'moment';
 
 @Component({
@@ -276,7 +277,7 @@ export class UtcDatepickerComponent implements OnInit {
     };
 
     keydown = (event:any) => {
-        if (event.keyCode === 27) { // escape key
+        if (event.key === 27) { // escape key
             this.showCalendar = false;
         }
     };
@@ -295,7 +296,17 @@ export class UtcDatepickerComponent implements OnInit {
     ngOnInit() {
         if (typeof this.date === 'object') {
             // date was passed in as a JS Date object
-            this.date = moment.utc(this.date).format(this.format)
+            this.date = moment.utc(this.date).format(this.format);
+        } else {
+            const isValid = moment.utc(this.date, this.format).format(this.format) === this.date;
+            if (!isValid) {
+                // date does not match format, so try to force it
+                this.date = moment.utc(this.date).format(this.format);
+                if (!moment.utc(this.date).isValid()) {
+                    // moment is unable to parse the string
+                    throw new Error('Invalid date string specified');
+                }
+            }
         }
         this.calendarTitle = this.getMomentDate(this.date).format('MMMM YYYY');
         this.tempDate = this.getMomentDate(this.date);
