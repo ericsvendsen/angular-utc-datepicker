@@ -277,7 +277,7 @@ export class UtcDatepickerComponent implements OnInit {
     };
 
     keydown = (event:any) => {
-        if (event.key === 27) { // escape key
+        if (event.key === 'Escape') {
             this.showCalendar = false;
         }
     };
